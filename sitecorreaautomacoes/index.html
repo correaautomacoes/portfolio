@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrêa Automações</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">Corrêa Automações</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Especialidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Serviços</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clients">Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quemsou">Quem Sou</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero text-center text-white d-flex align-items-center justify-content-center">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="display-4 animate-text">Corrêa Automações</h1>
+        <p class="lead animate-text">Soluções Inteligentes em Automação e Desenvolvimento Web</p>
+        <a href="#services" class="btn btn-hero mt-4">Saiba Mais</a>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills py-5 text-center">
+    <div class="container d-flex justify-content-center">
+        <div class="row w-100">
+            <!-- Skill Blocks -->
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('Node.js', '3 anos', 'Ambiente JavaScript para desenvolvimento de servidores e APIs.')">
+                <div class="skill-block">
+                    <p>Node.js</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('N8N', '2 anos', 'Ferramenta Low Code para automações complexas.')">
+                <div class="skill-block">
+                    <p>N8N</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('UiPath', '1 ano', 'Plataforma para automação robótica de processos.')">
+                <div class="skill-block">
+                    <p>UiPath</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('Open Source', '5 anos', 'Especialização em instalação e customização de sistemas de código aberto.')">
+                <div class="skill-block">
+                    <p>Open Source</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('HTML', '4 anos', 'Linguagem de marcação para construção de páginas web.')">
+                <div class="skill-block">
+                    <p>HTML</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('CSS', '4 anos', 'Linguagem de estilo para criação de layouts e design.')">
+                <div class="skill-block">
+                    <p>CSS</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('Python', '5 anos', 'Linguagem versátil, ideal para automações e análise de dados.')">
+                <div class="skill-block">
+                    <p>Python</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('JavaScript', '4 anos', 'Linguagem de programação para interatividade em sites.')">
+                <div class="skill-block">
+                    <p>JavaScript</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('PostgreSQL', '3 anos', 'Banco de dados relacional para gerenciamento de informações.')">
+                <div class="skill-block">
+                    <p>PostgreSQL</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('MySQL', '4 anos', 'Banco de dados relacional amplamente utilizado.')">
+                <div class="skill-block">
+                    <p>MySQL</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('MongoDB', '3 anos', 'Banco de dados NoSQL para aplicações modernas.')">
+                <div class="skill-block">
+                    <p>MongoDB</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 mb-4" onclick="showSkillDetails('Redis', '2 anos', 'Banco de dados NoSQL em memória, altamente performático, ideal para cache, filas e aplicações em tempo real.')">
+                <div class="skill-block">
+                    <p>Redis</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- Skill Details Panel -->
+        <div class="skill-details p-3 rounded" id="skillDetails">
+            <h3>Experiência</h3>
+            <p><strong>Tecnologia:</strong> <span id="skillName">Clique em uma tecnologia</span></p>
+            <p><strong>Tempo:</strong> <span id="skillExperience">---</span></p>
+            <p id="skillDescription">Selecione uma tecnologia para ver os detalhes.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Services Section -->
+<section id="services" class="services py-5">
+    <div class="container text-center">
+        <h2 class="mb-4" data-aos="fade-up">Como Posso Ajudar?</h2>
+        <div class="row">
+            <!-- Service 1 -->
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="service-card">
+                    <i class="fas fa-code fa-4x text-primary"></i>
+                    <h5 class="mt-3">Desenvolvimento Frontend e Backend</h5>
+                    <p>Criação de sites responsivos, sistemas web e APIs robustas.</p>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                <div class="service-card">
+                    <i class="fas fa-server fa-4x text-primary"></i>
+                    <h5 class="mt-3">Configuração de Servidores</h5>
+                    <p>Configuração, otimização e segurança de ambientes Linux e Windows.</p>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="service-card">
+                    <i class="fas fa-tools fa-4x text-primary"></i>
+                    <h5 class="mt-3">Instalação de Sistemas</h5>
+                    <p>Implantação e suporte técnico para sistemas e ferramentas empresariais.</p>
+                </div>
+            </div>
+            <!-- Service 4 -->
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="500">
+                <div class="service-card">
+                    <i class="fas fa-robot fa-4x text-primary"></i>
+                    <h5 class="mt-3">Automação de Processos</h5>
+                    <p>Desenvolvimento de automações personalizadas com ferramentas como Python e N8N.</p>
+                </div>
+            </div>
+            <!-- Service 5 -->
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                <div class="service-card">
+                    <i class="fas fa-database fa-4x text-primary"></i>
+                    <h5 class="mt-3">Gerenciamento de Bancos de Dados</h5>
+                    <p>Modelagem, otimização e manutenção de bancos de dados PostgreSQL, MySQL e MongoDB.</p>
+                </div>
+            </div>
+            <!-- Service 6 -->
+            <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="700">
+                <div class="service-card">
+                    <i class="fas fa-cogs fa-4x text-primary"></i>
+                    <h5 class="mt-3">Customização de Sistemas Open Source</h5>
+                    <p>Personalização e integração de soluções baseadas em plataformas de código aberto.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Clients Section -->
+<section id="clients" class="clients py-5">
+    <div class="container">
+        <h2 class="mb-4 text-center position-relative" data-aos="fade-up">
+            Clientes
+            <span class="decorative-line"></span>
+        </h2>
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="client-logo">
+                    <img src="imagens/materbio.png" class="img-fluid" alt="Cliente 1">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="client-logo">
+                    <img src="imagens/wedislen.png" class="img-fluid" alt="Cliente 2">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                <div class="client-logo">
+                    <img src="imagens/nuvemjti.png" class="img-fluid" alt="Cliente 3">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-6 col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="client-logo">
+                    <img src="imagens/londrina.jpeg" class="img-fluid" alt="Cliente 1">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="client-logo">
+                    <img src="imagens/itraker.jpeg" class="img-fluid" alt="Cliente 2">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3 mb-4" data-aos="zoom-in" data-aos-delay="600">
+                <div class="client-logo">
+                    <img src="imagens/descomplica.jpeg" class="img-fluid" alt="Cliente 3">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Me Section -->
+<section id="quemsou" class="about py-5 text-center">
+    <div class="container">
+        <h2 class="mb-4" data-aos="fade-up">Quem Sou Eu?</h2>
+        <div class="row align-items-center">
+            <!-- Image -->
+            <div class="col-md-6" data-aos="fade-right">
+                <img src="imagens/perfil.png" alt="Mateus Corrêa" class="img-fluid rounded-circle shadow">
+            </div>
+            <!-- Text -->
+            <div class="col-md-6" data-aos="fade-left">
+                <p class="mt-3">
+                    Olá! Meu nome é <strong>Mateus Corrêa</strong>, sou apaixonado por tecnologia, desenvolvimento de sistemas e automação de processos. 
+                    Com mais de <strong>5 anos de experiência</strong>, ajudo empresas a otimizarem seus processos e criarem soluções tecnológicas inteligentes.
+                </p>
+                <p>
+                    Minha jornada começou com o desejo de simplificar tarefas complexas e transformar ideias em realidade através da programação. 
+                    Hoje, atuo como <strong>Desenvolvedor Full Stack</strong> e <strong>Especialista em Automação</strong>, criando soluções que fazem a diferença.
+                </p>
+                <a href="https://wa.me/554399047081?text=Olá,%20tenho%20interesse%20nos%20seus%20serviços!" class="btn btn-primary mt-3">Entre em Contato</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact py-5">
+    <div class="container text-center">
+        <h2 class="mb-4 text-white" data-aos="fade-up">Entre em Contato</h2>
+        <p class="mb-4 text-light" data-aos="fade-up" data-aos-delay="200">
+            Estou disponível para novos projetos ou parcerias.<br>
+            Entre em contato comigo e marcamos uma conversa! 👋
+        </p>
+        <div class="contact-buttons" data-aos="fade-up" data-aos-delay="400">
+            <a href="mailto:correaautomacoes@gmail.com" class="btn btn-contact">E-mail</a>
+            <a href="https://wa.me/554399047081?text=Olá,%20tenho%20interesse%20nos%20seus%20serviços!" target="_blank" class="btn btn-contact">WhatsApp</a>
+            <a href="https://www.linkedin.com/in/seu-perfil" target="_blank" class="btn btn-contact">LinkedIn</a>
+            <a href="https://github.com/correaautomacoes" target="_blank" class="btn btn-contact">GitHub</a>
+        </div>
+        <footer class="mt-4 text-light" data-aos="fade-up" data-aos-delay="600">
+            <small>Feito com ❤️ por Mateus Corrêa | 2023</small>
+        </footer>
+    </div>
+</section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
